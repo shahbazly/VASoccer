@@ -5,30 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:liftOnScroll="true">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/toolbarColor"
-            app:navigationIconTint="@color/toolbarTextColor"
-            app:title="@string/src_main_toolbar_text"
-            app:titleTextColor="@color/toolbarTextColor" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
-        android:name="dev.shahbazly.vasoccer.ui.main.MainFragment"
+        android:name="dev.shahbazly.vasoccer.ui.splash.SplashFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/fragment_main" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
