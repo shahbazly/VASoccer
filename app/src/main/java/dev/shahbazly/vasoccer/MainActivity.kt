@@ -1,11 +1,5 @@
 package dev.shahbazly.vasoccer
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import dev.shahbazly.vasoccer.base.common.KodeinActivity
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-}
+class MainActivity : KodeinActivity(R.layout.activity_main)

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VA Soccer</string>
+
+    <string name="src_main_toolbar_text">Футбик</string>
 </resources>
