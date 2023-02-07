@@ -1,7 +1,9 @@
 package dev.shahbazly.vasoccer
 
 import android.content.Context
+import dev.shahbazly.vasoccer.api.apiModule
 import dev.shahbazly.vasoccer.base.common.KodeinApplication
+import dev.shahbazly.vasoccer.repositories.repositoriesModule
 import kotlinx.coroutines.DEBUG_PROPERTY_NAME
 import kotlinx.coroutines.DEBUG_PROPERTY_VALUE_ON
 import org.kodein.di.Kodein
@@ -21,6 +23,8 @@ class SoccerApplication : KodeinApplication(), KodeinAware {
 
     override val rootModule = Kodein.Module("Root") {
         import(module)
+        import(apiModule)
+        import(repositoriesModule)
     }
 
     companion object {

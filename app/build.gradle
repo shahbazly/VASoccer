@@ -35,6 +35,23 @@ android {
             debuggable true
         }
     }
+    flavorDimensions "version"
+    productFlavors {
+        dev {
+            dimension "version"
+            applicationIdSuffix ".dev"
+            buildConfigField "String", 'BASE_URL', "\"https://app.sportdataapi.com/api/v1/\""
+            buildConfigField "String", 'API_KEY', "\"84aa1bf0-a6eb-11ed-950b-317306b1291a\""
+        }
+        production {
+            dimension "version"
+            buildConfigField "String", 'BASE_URL', "\"https://app.sportdataapi.com/api/v1/\""
+            buildConfigField "String", 'API_KEY', "\"84aa1bf0-a6eb-11ed-950b-317306b1291a\""
+
+            versionCode 100 + android.defaultConfig.versionCode
+            applicationId "ru.vasoccer.app"
+        }
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
@@ -49,13 +66,19 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 
-    def material = "1.5.0"
+    def material = "1.8.0"
     implementation "com.google.android.material:material:$material"
 
     def retrofit = "2.9.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+
+    def room = "2.5.0"
+    implementation "androidx.room:room-ktx:$room"
+    implementation "androidx.room:room-rxjava2:$room"
+    implementation "androidx.room:room-runtime:$room"
+    kapt "androidx.room:room-compiler:$room"
 
     implementation 'io.coil-kt:coil:1.4.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
