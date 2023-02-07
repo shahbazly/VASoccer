@@ -130,13 +130,13 @@
         android:text="@string/src_scores_divider_symbol"
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="@+id/homeScoreTextView2"
+        app:layout_constraintBottom_toBottomOf="@+id/homeScoreTextView"
         app:layout_constraintEnd_toStartOf="@+id/centerVerticallyGuideLine"
         app:layout_constraintStart_toStartOf="@+id/centerVerticallyGuideLine"
         app:layout_constraintTop_toTopOf="@+id/awayScoreTextView" />
 
     <TextView
-        android:id="@+id/homeScoreTextView2"
+        android:id="@+id/homeScoreTextView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"

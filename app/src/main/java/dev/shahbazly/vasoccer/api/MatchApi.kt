@@ -1,6 +1,5 @@
 package dev.shahbazly.vasoccer.api
 
-import dev.shahbazly.vasoccer.api.response.MatchDto
 import dev.shahbazly.vasoccer.api.response.MatchesResponseDto
 import io.reactivex.Single
 import retrofit2.http.GET

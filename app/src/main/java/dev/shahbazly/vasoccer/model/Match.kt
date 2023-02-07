@@ -2,7 +2,7 @@ package dev.shahbazly.vasoccer.model
 
 import java.io.Serializable
 
-class Match(
+data class Match(
     var matchId: Long,
     var leagueName: String,
     var matchStartDate: String,
