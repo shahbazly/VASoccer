@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface MatchApi {
 
-    @GET("/soccer/matches")
+    @GET("/api/v1/soccer/matches")
     fun getMatches(
         @Query("season_id") seasonId: Long
     ): Single<MatchesResponseDto>

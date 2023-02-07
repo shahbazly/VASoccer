@@ -40,12 +40,12 @@ android {
         dev {
             dimension "version"
             applicationIdSuffix ".dev"
-            buildConfigField "String", 'BASE_URL', "\"https://app.sportdataapi.com/api/v1/\""
+            buildConfigField "String", 'BASE_URL', "\"https://app.sportdataapi.com/\""
             buildConfigField "String", 'API_KEY', "\"84aa1bf0-a6eb-11ed-950b-317306b1291a\""
         }
         production {
             dimension "version"
-            buildConfigField "String", 'BASE_URL', "\"https://app.sportdataapi.com/api/v1/\""
+            buildConfigField "String", 'BASE_URL', "\"https://app.sportdataapi.com/\""
             buildConfigField "String", 'API_KEY', "\"84aa1bf0-a6eb-11ed-950b-317306b1291a\""
 
             versionCode 100 + android.defaultConfig.versionCode
