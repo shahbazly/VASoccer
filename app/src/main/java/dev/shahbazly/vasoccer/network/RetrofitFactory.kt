@@ -17,8 +17,8 @@ object RetrofitFactory {
 
     fun createRx(
         baseUrl: String,
-        connectTimeOutSeconds: Long = 30,
-        readTimeoutSeconds: Long = 30
+        connectTimeOutSeconds: Long = 5,
+        readTimeoutSeconds: Long = 5
     ): Retrofit =
         Retrofit.Builder()
             .baseUrl(baseUrl)

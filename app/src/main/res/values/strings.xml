@@ -4,4 +4,5 @@
     <string name="src_main_toolbar_text">Футбик</string>
 
     <string name="src_scores_divider_symbol">:</string>
+    <string name="src_loading_error">Ошибка!\nЧто-то пошло не так</string>
 </resources>

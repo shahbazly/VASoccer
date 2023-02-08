@@ -26,6 +26,9 @@ class MainFragment : BaseDialogFragment<MainViewModel>(R.layout.fragment_main) {
         super.bindViewModel()
 
         with(viewModel) {
+            bindVisible(loadingProgressBarVisible, viewBinding.loadingProgressBar)
+            bindVisible(errorMessageTextVisible, viewBinding.errorMessageTextView)
+
             bind(matchesDataList) {
                 matchAdapter.submitList(it)
             }
