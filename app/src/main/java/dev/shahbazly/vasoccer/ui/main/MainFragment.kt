@@ -2,12 +2,14 @@ package dev.shahbazly.vasoccer.ui.main
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.commit
 import androidx.recyclerview.widget.DefaultItemAnimator
 import by.kirich1409.viewbindingdelegate.viewBinding
 import dev.shahbazly.vasoccer.R
 import dev.shahbazly.vasoccer.base.common.BaseDialogFragment
 import dev.shahbazly.vasoccer.databinding.FragmentMainBinding
 import dev.shahbazly.vasoccer.ui.main.adapter.MatchAdapter
+import dev.shahbazly.vasoccer.ui.webview.WebFragment
 
 class MainFragment : BaseDialogFragment<MainViewModel>(R.layout.fragment_main) {
     override val viewModel: MainViewModel by viewModel(MainViewModel::class.java)
@@ -39,7 +41,22 @@ class MainFragment : BaseDialogFragment<MainViewModel>(R.layout.fragment_main) {
         with(viewBinding) {
             matchesRecyclerView.adapter = matchAdapter
             matchesRecyclerView.itemAnimator = DefaultItemAnimator()
+
+            apiDocsButton.setOnClickListener {
+                navigateToWebApiScreen()
+            }
         }
+    }
+
+    private fun navigateToWebApiScreen() = parentFragmentManager.commit {
+        setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out)
+        replace(
+            R.id.fragmentContainer,
+            WebFragment.newInstance(),
+            WebFragment.TAG
+        )
+        setReorderingAllowed(true)
+        addToBackStack(WebFragment.TAG)
     }
 
     companion object {

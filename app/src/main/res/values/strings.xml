@@ -5,4 +5,5 @@
 
     <string name="src_scores_divider_symbol">:</string>
     <string name="src_loading_error">Ошибка!\nЧто-то пошло не так</string>
+    <string name="src_web_button_text">Some web page</string>
 </resources>
